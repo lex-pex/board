@@ -1,0 +1,60 @@
+@import url(./fa/css/fa.min.css);
+
+.welcome-area {
+  padding:65px 0 10px 0;
+  background:#edf5f8;
+}
+.canvas {
+  height:450px;
+  overflow-y:auto;
+}
+.comment {
+  background:#fff;
+  text-align: left;
+  color:#555;
+  border-radius:20px;
+  border: solid 1px #f3f3f3;
+  padding:10px;
+  margin:5px;
+}
+.comments label {
+  font-size: 0.8em;
+  margin:0;
+  padding:0;
+  color:#777;
+  padding-left: 25px;
+}
+.comments textarea {
+  color:#444;
+  display: block;
+  width:99%;
+  height:70px;
+  border:1px solid #f3f3f3;
+  border-radius: 20px;
+  margin:5px;
+  padding:10px;
+}
+.comment-tools {
+  cursor: pointer;
+  font-size: 0.7em;
+  float:right;
+}
+
+.rating-block i {
+  font-size: 18px;
+  color:green;
+}
+
+.green {
+  color: green;
+}
+
+
+
+
+
+
+
+
+
+
