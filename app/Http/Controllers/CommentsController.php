@@ -17,11 +17,16 @@ class CommentsController extends Controller
 
     // Write Down the new comment
     public function store(Request $request) {
+        if(!$u = Auth::user()) {
+            echo "* TO PARTICIPATE *\nYOU NEED TO LOGIN";
+            exit();
+        }
         $c = new Comment();
         $c->user_id =  Auth::user()->id;
         $c->post_id = $request->post_id;
         $c->text = $request->text;
         $c->save();
+        return null;
     }
 
     // Retrieve, change and save the comment record

@@ -1,7 +1,4 @@
-
-
 $(document).ready(function() {
-
     var rating_1 = $('#rating_1');
     var rating_2 = $('#rating_2');
     var rating_3 = $('#rating_3');
@@ -29,6 +26,7 @@ $(document).ready(function() {
         displayedRating = rate;
         drawRate(rate);
     }
+
     function drawRate() {
         switch (displayedRating) {
             case 1: ratingOne();
@@ -131,76 +129,43 @@ $(document).ready(function() {
     });
 
     rating_1.click(function () {
-        $.post('/rating/store', { _token: token, id: post_id, rating: 1 },
-            function (data) {
-                if (data) alert(data);
-        });
-        displayedRating = 1;
+        ratingStore(1);
         drawRate();
         setTimeout(getRating, 1500);
     });
 
     rating_2.click(function () {
-        $.post('/rating/store', { _token: token, id: post_id, rating: 2 },
-            function (data) {
-                if (data) alert(data);
-            });
-        displayedRating = 2;
+        ratingStore(2);
         drawRate();
         setTimeout(getRating, 1500);
     });
 
     rating_3.click(function () {
-        $.post('/rating/store', { _token: token, id: post_id, rating: 3 },
-            function (data) {
-                if (data) alert(data);
-            });
-        displayedRating = 3;
+        ratingStore(3);
         drawRate();
         setTimeout(getRating, 1500);
     });
 
     rating_4.click(function () {
-        $.post('/rating/store', { _token: token, id: post_id, rating: 4 },
-            function (data) {
-                if (data) alert(data);
-            });
-        displayedRating = 4;
+        ratingStore(4);
         drawRate();
         setTimeout(getRating, 1500);
     });
 
     rating_5.click(function () {
-        $.post('/rating/store', { _token: token, id: post_id, rating: 5 },
-            function (data) {
-                if (data) alert(data);
-            });
-        displayedRating = 5;
+        ratingStore(5);
         drawRate();
         setTimeout(getRating, 1500);
     });
+
+    function ratingStore(rate) {
+        $.post('/rating/store', { _token: token, id: post_id, rating: rate },
+            function (data) {
+                if (data) alert(data);
+            });
+        displayedRating = rate;
+    }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

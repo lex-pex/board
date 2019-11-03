@@ -36,7 +36,11 @@ cmt.keyup(function(event) {
 
 function save(commentText) {
     if(updatedId === 0) {
-        $.post('/comment/store', { _token: token, post_id: post_id, text: commentText });
+        $.post('/comment/store', { _token: token, post_id: post_id, text: commentText },
+            function(data) {
+                if(data)
+                    alert(data);
+            });
     } else {
         $.post('/comment/update', { _token: token, "id" : updatedId, text: commentText },
             function(data) {
