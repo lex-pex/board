@@ -8,6 +8,11 @@
                 <div class="card my-3">
                     <div class="card-header">{{ $ad->title }}</div>
                     <div class="card-body">
+                        <div class="position-absolute text-muted font-weight-bold">
+                            
+                            <p class="text-muted">Price:</p>
+                            <p class="text-light bg-danger">{{ $ad->price }}</p>
+                        </div>
                         <img src="{{ $ad->image ? $ad->image : '/up/ads/empty.jpg' }}" width="50%"/>
                         <p>{{ substr($ad->text, 0, 130) }} <a href="{{ route('adShow', $ad->id) }}"> &raquo; Read more...</a></p>
                     </div>
