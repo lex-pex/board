@@ -10,6 +10,8 @@
                     <div class="position-absolute text-muted font-weight-bold">
                         <img class="rounded-circle img-thumbnail shadow" src="{{ $author->image }}" width="55px"/>
                         {{ $author->name }}
+                        <p class="text-muted">Price:</p>
+                        <p class="text-light bg-danger">{{ $ad->price }}</p>
                     </div>
                 </div>
                 <div class="card-body">
