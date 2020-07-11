@@ -9,7 +9,7 @@
                     <div class="card-header">{{ $ad->title }}</div>
                     <div class="card-body">
                         <div class="position-absolute text-muted font-weight-bold">
-                            
+
                             <p class="text-muted">Price:</p>
                             <p class="text-light bg-danger">{{ $ad->price }}</p>
                         </div>
